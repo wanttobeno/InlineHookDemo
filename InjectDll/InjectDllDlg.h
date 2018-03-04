@@ -46,8 +46,12 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	afx_msg void OnBtnInject();
 	afx_msg void OnBtnUninject();
+
 	afx_msg void OnBtnInject2();
 	afx_msg void OnBtnUninject2();
+	
+	afx_msg void Inject(char * szDllName, char * szProcessName);
+	afx_msg void Uninject(char * szDllName, char * szProcessName);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

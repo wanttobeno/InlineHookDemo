@@ -142,26 +142,10 @@ void CInjectDllDlg::OnBtnInject()
 	// TODO: Add your control notification handler code here
     char szDllName[MAX_PATH] = { 0 };
     char szProcessName[MAXBYTE] = { 0 };
-    DWORD dwPid = 0;
 	
     GetDlgItemText(IDC_EDIT_DLLFILE, szDllName, MAX_PATH);
     GetDlgItemText(IDC_EDIT_PROCESSNAME, szProcessName, MAXBYTE);
-	if (strlen(szDllName) == 0 || strlen(szProcessName)==0)
-		return;
-    // 由进程名获得PID
-    dwPid = GetProcId(szProcessName);
-	if (dwPid != 0)
-	{
-		// 注入szDllName到dwPid
-		if(InjectDll(dwPid, szDllName))
-			::MessageBox(m_hWnd,_T("注入成功"),_T("提示"),MB_OK);
-		else
-			::MessageBox(m_hWnd,_T("注入失败"),_T("提示"),MB_OK);
-	}
-	else
-	{
-		::MessageBox(m_hWnd,_T("进程不存在"),_T("提示"),MB_OK);
-	}
+	Inject(szDllName, szProcessName);
 }
 
 DWORD CInjectDllDlg::GetProcId(char *szProcessName)
@@ -249,25 +233,32 @@ void CInjectDllDlg::OnBtnUninject()
 {
     // TODO: Add your control notification handler code here
     char szDllName[MAX_PATH] = { 0 };
-    char szProcessName[MAXBYTE] = { 0 };
-    DWORD dwPid = 0;
-    
+    char szProcessName[MAXBYTE] = { 0 }; 
     GetDlgItemText(IDC_EDIT_DLLFILE, szDllName, MAX_PATH);
     GetDlgItemText(IDC_EDIT_PROCESSNAME, szProcessName, MAXBYTE);
-    if (strlen(szDllName) == 0 || strlen(szProcessName)==0)
+	Uninject(szDllName, szProcessName);
+}
+
+void  CInjectDllDlg::Uninject(char * szDllName, char * szProcessName)
+{
+	if (strlen(szDllName) == 0 || strlen(szProcessName)==0)
 		return;
-    // 由进程名获得PID
-    dwPid = GetProcId(szProcessName);
+	// 由进程名获得PID
+	DWORD dwPid = GetProcId(szProcessName);
 	if (dwPid !=0 )
 	{
 		// 注入szDllName到dwPid
-		UnInjectDll(dwPid, szDllName);
+		if(UnInjectDll(dwPid, szDllName))
+			::MessageBox(m_hWnd,_T("卸载成功"),_T("提示"),MB_OK);
+		else
+			::MessageBox(m_hWnd,_T("卸载成功"),_T("提示"),MB_OK);
 	}
 	else
 	{
 		::MessageBox(m_hWnd,_T("进程不存在"),_T("提示"),MB_OK);
 	}
 }
+
 
 BOOL CInjectDllDlg::UnInjectDll(DWORD dwPid, char *szDllName)
 {
@@ -330,22 +321,7 @@ void CInjectDllDlg::OnBtnInject2()
 	
     GetDlgItemText(IDC_EDIT_DLLFILE2, szDllName, MAX_PATH);
     GetDlgItemText(IDC_EDIT_PROCESSNAME2, szProcessName, MAXBYTE);
-	if (strlen(szDllName) == 0 || strlen(szProcessName)==0)
-		return;
-    // 由进程名获得PID
-    dwPid = GetProcId(szProcessName);
-	if (dwPid !=0)
-	{
-		// 注入szDllName到dwPid
-		if(InjectDll(dwPid, szDllName))
-			::MessageBox(m_hWnd,_T("注入成功"),_T("提示"),MB_OK);
-		else
-			::MessageBox(m_hWnd,_T("注入失败"),_T("提示"),MB_OK);
-	}
-	else
-	{
-		::MessageBox(m_hWnd,_T("进程不存在"),_T("提示"),MB_OK);
-	}
+	Inject(szDllName, szProcessName);
 }
 
 void CInjectDllDlg::OnBtnUninject2() 
@@ -353,19 +329,25 @@ void CInjectDllDlg::OnBtnUninject2()
     // TODO: Add your control notification handler code here
     char szDllName[MAX_PATH] = { 0 };
     char szProcessName[MAXBYTE] = { 0 };
-    DWORD dwPid = 0;
-    
+
     GetDlgItemText(IDC_EDIT_DLLFILE2, szDllName, MAX_PATH);
     GetDlgItemText(IDC_EDIT_PROCESSNAME2, szProcessName, MAXBYTE);
-    
+	Uninject(szDllName, szProcessName);
+}
+
+void CInjectDllDlg::Inject(char * szDllName, char * szProcessName)
+{
 	if (strlen(szDllName) == 0 || strlen(szProcessName)==0)
 		return;
-    // 由进程名获得PID
-    dwPid = GetProcId(szProcessName);
+	// 由进程名获得PID
+	DWORD dwPid = GetProcId(szProcessName);
 	if (dwPid != 0)
 	{
 		// 注入szDllName到dwPid
-		UnInjectDll(dwPid, szDllName);
+		if(InjectDll(dwPid, szDllName))
+			::MessageBox(m_hWnd,_T("注入成功"),_T("提示"),MB_OK);
+		else
+			::MessageBox(m_hWnd,_T("注入失败"),_T("提示"),MB_OK);
 	}
 	else
 	{
