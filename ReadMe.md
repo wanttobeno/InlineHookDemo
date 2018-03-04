@@ -4,7 +4,7 @@
     InlineHookDemo -- Hook CreateProcessW as example.
 </p>
 
-
+### 本方案只适合win32位。  Only for win32。
 
 原函数CreateProcessW的Call入口 
 
