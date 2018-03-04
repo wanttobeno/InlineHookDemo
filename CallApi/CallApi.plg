@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CallApi - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/CallApi.res" /d "_DEBUG" /d "_AFXDLL" "C:\新建文件夹\新建文件夹\【吾爱动画大赛2016参赛作品】- JS下载者脚本木马的分析与防御\实验程序\CallApi\CallApi.rc"" 
+Creating temporary file "C:\Users\ZhanYue\AppData\Local\Temp\RSP6BC7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/CallApi.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\新建文件夹\新建文件夹\【吾爱动画大赛2016参赛作品】- JS下载者脚本木马的分析与防御\实验程序\CallApi\CallApi.cpp"
+"C:\新建文件夹\新建文件夹\【吾爱动画大赛2016参赛作品】- JS下载者脚本木马的分析与防御\实验程序\CallApi\CallApiDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\ZhanYue\AppData\Local\Temp\RSP6BC7.tmp" 
+Creating temporary file "C:\Users\ZhanYue\AppData\Local\Temp\RSP6BC8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/CallApi.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\新建文件夹\新建文件夹\【吾爱动画大赛2016参赛作品】- JS下载者脚本木马的分析与防御\实验程序\CallApi\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ZhanYue\AppData\Local\Temp\RSP6BC8.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/CallApi.pdb" /debug /machine:I386 /out:"Debug/CallApi.exe" /pdbtype:sept  ".\Debug\CallApi.obj" ".\Debug\CallApiDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\CallApi.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CallApi.cpp
+CallApiDlg.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/CallApi.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\CallApi.sbr" ".\Debug\CallApiDlg.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+CallApi.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

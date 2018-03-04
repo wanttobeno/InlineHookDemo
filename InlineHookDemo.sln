@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookCreateProcess", "HookCreateProcess\HookCreateProcess.vcproj", "{8A32D29A-2C4C-4797-A6CB-6E89B1C04262}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InjectDll", "InjectDll\InjectDll.vcproj", "{37705D61-429C-4F07-9757-51A3F9466BD7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CallApi", "CallApi\CallApi.vcproj", "{78B1BD84-07B0-49B1-A184-13FAEA9942ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A32D29A-2C4C-4797-A6CB-6E89B1C04262}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8A32D29A-2C4C-4797-A6CB-6E89B1C04262}.Debug|Win32.Build.0 = Debug|Win32
+		{8A32D29A-2C4C-4797-A6CB-6E89B1C04262}.Release|Win32.ActiveCfg = Release|Win32
+		{8A32D29A-2C4C-4797-A6CB-6E89B1C04262}.Release|Win32.Build.0 = Release|Win32
+		{37705D61-429C-4F07-9757-51A3F9466BD7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{37705D61-429C-4F07-9757-51A3F9466BD7}.Debug|Win32.Build.0 = Debug|Win32
+		{37705D61-429C-4F07-9757-51A3F9466BD7}.Release|Win32.ActiveCfg = Release|Win32
+		{37705D61-429C-4F07-9757-51A3F9466BD7}.Release|Win32.Build.0 = Release|Win32
+		{78B1BD84-07B0-49B1-A184-13FAEA9942ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{78B1BD84-07B0-49B1-A184-13FAEA9942ED}.Debug|Win32.Build.0 = Debug|Win32
+		{78B1BD84-07B0-49B1-A184-13FAEA9942ED}.Release|Win32.ActiveCfg = Release|Win32
+		{78B1BD84-07B0-49B1-A184-13FAEA9942ED}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
